@@ -42,6 +42,7 @@
         <tr>
             <th>ID</th>
             <th>Название</th>
+            <th>Категория</th>
             <th>Цена</th>
             <th>Действие</th>
         </tr>
@@ -50,6 +51,7 @@
         <tr th:each="p : ${products}">
             <td th:text="${p.id}"/>
             <td th:text="${p.title}"/>
+            <td th:text="${p.category.title}"/>
             <td th:text="${p.price}"/>
             <td>
                 <a class="btn btn-success" th:href="@{'/cart/add/' + ${p.id}}">В корзину</a>
